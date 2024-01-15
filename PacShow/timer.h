@@ -1,5 +1,5 @@
 #pragma once
-// by Antonis Ntit
+// by Timmbaland
 #pragma once
 #include <iostream>
 #include <chrono>
@@ -32,13 +32,6 @@ public:
 
 	}
 
-	/// <summary>
-	/// Set the callback function. Example: .onTick(myCallback).
-	/// void myCallback(int tickCounter){}
-	/// </summary>
-	/// <param name="callback"></param>
-
-
 
 	//template< class F>	
 	void onTick(SenderClass *_instance, void  (SenderClass::* callback)(int))
@@ -48,10 +41,6 @@ public:
 	}
 
 
-	/// <summary>
-	/// Set interval in msec
-	/// </summary>
-	/// <param name="intrv"></param>
 	void setInterval(int intrv)
 	{		
 		if (intrv <= 0) { intrv = 0; }
@@ -64,18 +53,11 @@ public:
 		return tInterval;
 	}
 
-	/// <summary>
-	/// Get if enable the timer
-	/// </summary>
-	/// <returns></returns>
 	bool isEnable()
 	{
 		return enable;
 	}
 
-	/// <summary>
-	/// Start timer
-	/// </summary>
 	void start()
 	{
 		if (enable) { return; }
@@ -85,9 +67,6 @@ public:
 		//timerThread = new thread([this]() {startThread(); });
 	}
 
-	/// <summary>
-	/// Stop timer
-	/// </summary>
 	void stop()
 	{
 		enable = false;
@@ -124,7 +103,6 @@ private:
 
 };
 
-//Declaretion static
 template <class C>
 int Timer<C>::instCounter = 0;
 

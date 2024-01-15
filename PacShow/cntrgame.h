@@ -144,8 +144,6 @@ public:
 			   (sprPos.y) < (sprH/2);		
 	}
 
-
-	 
 	//---
 	void run()
 	{		
@@ -159,17 +157,13 @@ public:
 		stopMove = true;
 	}
 
-	
-
 	//---
 	void endGame()
 	{
 
-	}	
+    }
 
 private:
-	
- 
 
 };
  
